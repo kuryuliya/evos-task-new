@@ -17,9 +17,8 @@ public class Methods {
         return client.doGetRequest(url);
     }
 
-    public int checkCountsOfResult(HttpResponse response){
+    public int getCountsOfResult(String body){
 
-        String body = HttpAsyncClient.getBody(response.getEntity());
         final ObjectNode node = readValueJSON(body);
         String count = node.get("result").get("search_result").get("count").asText();
         System.out.println(count);
