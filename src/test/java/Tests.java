@@ -17,8 +17,6 @@ public class Tests {
 
     @Test(dataProvider = "getData")
     public void searchCarsByCriteria(String category, String bodyStyle, String marka, String model, String yearsFrom, String yearsTo, String gearbox, String raceFrom, String raceTo) {
-        HttpResponse response;
-        int count;
 //        формируем критерии запроса
         StringBuilder params = new StringBuilder();
         params.append("&category_id=" + category);
@@ -31,12 +29,12 @@ public class Tests {
         params.append("&raceFrom=" + raceFrom);
         params.append("&raceTo=" + raceTo);
 //        делаем запрос, получаем ответ
-        response = page.createRequest(params.toString());
+        var response = page.createRequest(params.toString());
         StatusLine statusLine = response.getStatusLine();
 //        проверяем, что запрос был успешный, если ассерт не пройдет, то выведет сообщение, которое пришло нам в ответе на запрос
         assertEquals(statusLine.getStatusCode(), 200, statusLine.getReasonPhrase());
 //        получаем count и проверяем, что он больше нуля, то есть, что поиск дал результат
-        count = page.checkCountsOfResult(response);
+        var count = page.checkCountsOfResult(response);
         assertTrue(count > 0, "Search returned no results, possibly incorrect search criteria");
 
 //        Колбэк запроса, время ответа и count выводятся в консоль
