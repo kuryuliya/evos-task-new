@@ -1,41 +1,64 @@
-import org.apache.http.HttpResponse;
-import org.apache.http.StatusLine;
+import static io.restassured.RestAssured.given;
+import static java.util.Arrays.asList;
+import static org.testng.Assert.assertTrue;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.stream.Stream;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.Iterator;
-import java.util.List;
+public class Tests extends BaseTest {
 
-import java.util.stream.Stream;
-
-import static java.util.Arrays.asList;
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
-
-public class Tests {
     Methods page = new Methods();
 
     @Test(dataProvider = "getData")
-    public void searchCarsByCriteria(String category, String bodyStyle, String marka, String model, String yearsFrom, String yearsTo, String gearbox, String raceFrom, String raceTo) {
+    public void searchCarsByCriteria(String category, String bodyStyle, String marka, String model, String yearsFrom,
+            String yearsTo, String gearbox, String raceFrom, String raceTo) {
 //        формируем критерии запроса
-        StringBuilder params = new StringBuilder();
-        params.append("&category_id=" + category);
-        params.append("&bodystyle[0]=" + bodyStyle);
-        params.append("&marka_id[0]=" + marka);
-        params.append("&model_id[0]=" + model);
-        params.append("&s_yers[1]=" + yearsFrom);
-        params.append("&po_yers[1]=" + yearsTo);
-        params.append("&gearbox[1]=" + gearbox);
-        params.append("&raceFrom=" + raceFrom);
-        params.append("&raceTo=" + raceTo);
+        StringBuilder params1 = new StringBuilder();
+
+        params1.append("&category_id=" + category);
+        params1.append("&bodystyle[0]=" + bodyStyle);
+        params1.append("&marka_id[0]=" + marka);
+        params1.append("&model_id[0]=" + model);
+        params1.append("&s_yers[1]=" + yearsFrom);
+        params1.append("&po_yers[1]=" + yearsTo);
+        params1.append("&gearbox[1]=" + gearbox);
+        params1.append("&raceFrom=" + raceFrom);
+        params1.append("&raceTo=" + raceTo);
+
+        var params = new HashMap<String,String>();
+        params.put("category_id", category);
+        params.put("bodystyle[0]", bodyStyle);
+        params.put("marka_id[0]", marka);
+      params.put("model_id[0]", model);
+       params.put("po_yers[1]", yearsTo);
+      params.put("s_yers[1]", yearsFrom);
+        params.put("gearbox[1]", gearbox);
+        params.put("raceFrom", raceFrom);
+//        params.put("raceTo", raceTo);
+
+
+
 //        делаем запрос, получаем ответ
-        var response = page.createRequest(params.toString());
-        StatusLine statusLine = response.getStatusLine();
-//        проверяем, что запрос был успешный, если ассерт не пройдет, то выведет сообщение, которое пришло нам в ответе на запрос
-        assertEquals(statusLine.getStatusCode(), 200, statusLine.getReasonPhrase());
-//        получаем count и проверяем, что он больше нуля, то есть, что поиск дал результат
-        var count = page.checkCountsOfResult(response);
-        assertTrue(count > 0, "Search returned no results, possibly incorrect search criteria");
+
+        String response = given()
+                .when()
+                .params(params)
+                .get()
+                .then()
+                .log()
+                .all()
+                .statusCode(200)
+                .and()
+                .extract()
+                .asString();
+
+        var resultCount = page.getCountsOfResult(response);
+
+        assertTrue(resultCount > 0, "Search returned no results, possibly incorrect search criteria");
 
 //        Колбэк запроса, время ответа и count выводятся в консоль
 
