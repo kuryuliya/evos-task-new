@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Stream;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -15,31 +16,19 @@ public class Tests extends BaseTest {
 
     @Test(dataProvider = "getData")
     public void searchCarsByCriteria(String category, String bodyStyle, String marka, String model, String yearsFrom,
-            String yearsTo, String gearbox, String raceFrom, String raceTo) {
+                                     String yearsTo, String gearbox, String raceFrom, String raceTo) {
 //        формируем критерии запроса
-        StringBuilder params1 = new StringBuilder();
 
-        params1.append("&category_id=" + category);
-        params1.append("&bodystyle[0]=" + bodyStyle);
-        params1.append("&marka_id[0]=" + marka);
-        params1.append("&model_id[0]=" + model);
-        params1.append("&s_yers[1]=" + yearsFrom);
-        params1.append("&po_yers[1]=" + yearsTo);
-        params1.append("&gearbox[1]=" + gearbox);
-        params1.append("&raceFrom=" + raceFrom);
-        params1.append("&raceTo=" + raceTo);
-
-        var params = new HashMap<String,String>();
+        var params = new HashMap<String, String>();
         params.put("category_id", category);
         params.put("bodystyle[0]", bodyStyle);
         params.put("marka_id[0]", marka);
-      params.put("model_id[0]", model);
-       params.put("po_yers[1]", yearsTo);
-      params.put("s_yers[1]", yearsFrom);
+        params.put("model_id[0]", model);
+        params.put("po_yers[1]", yearsTo);
+        params.put("s_yers[1]", yearsFrom);
         params.put("gearbox[1]", gearbox);
         params.put("raceFrom", raceFrom);
 //        params.put("raceTo", raceTo);
-
 
 
 //        делаем запрос, получаем ответ
