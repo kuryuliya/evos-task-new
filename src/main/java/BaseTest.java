@@ -9,8 +9,8 @@ import org.testng.annotations.BeforeClass;
 public class BaseTest {
 
     private final static String BASE_URI = "https://developers.ria.com/auto/search?";
-    private String API_KEY_HEADER = "api_key=MUcjo3x6iWRA5sRPQZFzkEAFTXnT2qKPELpO8lxh";
-    private String API_KEY_VALUE = "api_key=MUcjo3x6iWRA5sRPQZFzkEAFTXnT2qKPELpO8lxh";
+    private String API_KEY_HEADER = "api_key";
+    private String API_KEY_VALUE = "MUcjo3x6iWRA5sRPQZFzkEAFTXnT2qKPELpO8lxh";
 
     @BeforeClass
     public void configureRequestsBeforeRunningTests() {
