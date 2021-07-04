@@ -1,24 +1,20 @@
-import org.apache.http.HttpResponse;
-import org.apache.http.StatusLine;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import static io.restassured.RestAssured.given;
+import static java.util.Arrays.asList;
+import static org.testng.Assert.assertTrue;
 
 import java.util.Iterator;
 import java.util.List;
-
 import java.util.stream.Stream;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
-import static java.util.Arrays.asList;
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+public class Tests extends BaseTest {
 
-public class Tests {
     Methods page = new Methods();
 
     @Test(dataProvider = "getData")
-    public void searchCarsByCriteria(String category, String bodyStyle, String marka, String model, String yearsFrom, String yearsTo, String gearbox, String raceFrom, String raceTo) {
-        HttpResponse response;
-        int count;
+    public void searchCarsByCriteria(String category, String bodyStyle, String marka, String model, String yearsFrom,
+            String yearsTo, String gearbox, String raceFrom, String raceTo) {
 //        формируем критерии запроса
         StringBuilder params = new StringBuilder();
         params.append("&category_id=" + category);
@@ -31,13 +27,19 @@ public class Tests {
         params.append("&raceFrom=" + raceFrom);
         params.append("&raceTo=" + raceTo);
 //        делаем запрос, получаем ответ
-        response = page.createRequest(params.toString());
-        StatusLine statusLine = response.getStatusLine();
-//        проверяем, что запрос был успешный, если ассерт не пройдет, то выведет сообщение, которое пришло нам в ответе на запрос
-        assertEquals(statusLine.getStatusCode(), 200, statusLine.getReasonPhrase());
-//        получаем count и проверяем, что он больше нуля, то есть, что поиск дал результат
-        count = page.checkCountsOfResult(response);
-        assertTrue(count > 0, "Search returned no results, possibly incorrect search criteria");
+
+        String response = given()
+                .when()
+                .get(params.toString())
+                .then()
+                .statusCode(200)
+                .and()
+                .extract()
+                .asString();
+
+        var resultCount = page.getCountsOfResult(response);
+
+        assertTrue(resultCount > 0, "Search returned no results, possibly incorrect search criteria");
 
 //        Колбэк запроса, время ответа и count выводятся в консоль
 
