@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e55f32d-746e-485d-94d7-a86174cd5ede" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EvosTestTask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EvosTestTask.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests.java" afterDir="false" />
+    </list>
+    <list id="1467eb57-63cc-4eae-a3c1-8f9e42e1cb59" name="Changes by buba" comment="" />
+    <list id="934ac61d-9d9b-4b04-92dd-0e6893b47cc9" name="Changes by Home" comment="">
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +47,16 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/test/java/Tests.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="5" changelist="3e55f32d-746e-485d-94d7-a86174cd5ede" />
+        <range start1="18" end1="28" start2="19" end2="44" changelist="3e55f32d-746e-485d-94d7-a86174cd5ede" />
+        <range start1="32" end1="33" start2="48" end2="50" changelist="934ac61d-9d9b-4b04-92dd-0e6893b47cc9" />
+        <range start1="34" end1="34" start2="51" end2="53" changelist="3e55f32d-746e-485d-94d7-a86174cd5ede" />
+      </ranges>
+    </file>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -138,7 +154,8 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -167,12 +184,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.Tests">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -196,6 +226,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tests.searchCarsByCriteria" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="EvosTestTask" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Tests" />
+      <option name="METHOD_NAME" value="searchCarsByCriteria" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -208,6 +251,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.Tests" />
+        <item itemvalue="TestNG.Tests.searchCarsByCriteria" />
       </list>
     </recent_temporary>
   </component>
@@ -224,6 +268,7 @@
       <updated>1537686616785</updated>
       <workItem from="1537767255275" duration="3647000" />
       <workItem from="1625385916767" duration="1036000" />
+      <workItem from="1625388642801" duration="4832000" />
     </task>
     <servers />
   </component>
@@ -270,6 +315,18 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
