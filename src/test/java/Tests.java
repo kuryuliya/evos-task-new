@@ -48,10 +48,21 @@ public class Tests extends BaseTest {
         var resultCount = page.getCountsOfResult(response);
 
         assertTrue(resultCount > 0, "Search returned no results, possibly incorrect search criteria");
-
-//        Колбэк запроса, время ответа и count выводятся в консоль
-
     }
+
+    /**
+     * Tanya
+     * input parameters String category, String bodyStyle, String marka
+     *  get result.search_result_common.count - json path >0
+     * */
+
+
+    /**
+     * Jenya
+     * input parameters String model, String yearsFrom, String yearsTo
+     *  get ....query_string
+     *  check assertTrue(result.contains("model_id"), "Not found such a criteria");
+     * */
 
     @DataProvider()
     public Iterator<Object[]> getData() {
