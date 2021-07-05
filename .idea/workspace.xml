@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e55f32d-746e-485d-94d7-a86174cd5ede" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Methods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests.java" afterDir="false" />
     </list>
     <list id="1467eb57-63cc-4eae-a3c1-8f9e42e1cb59" name="Changes by buba" comment="" />
@@ -47,6 +44,11 @@
         <option name="url" value="https://github.com/kuryuliya/evos-task-new.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/BaseTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/HttpAsyncClient.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/Methods.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -192,12 +194,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.Test_Jeny">
+  <component name="RunManager" selected="TestNG.Tests.searchCarsByCriteria">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -289,10 +302,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Tests.searchCarsByCriteria" />
         <item itemvalue="TestNG.Test_Jeny" />
         <item itemvalue="TestNG.Test_Jeny.searchCarsByCriteria (1)" />
         <item itemvalue="TestNG.Test_Jeny (1)" />
-        <item itemvalue="TestNG.Tests.searchCarsByCriteria" />
         <item itemvalue="TestNG.Tests" />
       </list>
     </recent_temporary>
