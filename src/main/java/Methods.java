@@ -20,7 +20,7 @@ public class Methods {
     public int getCountsOfResult(String body){
 
         final ObjectNode node = readValueJSON(body);
-        String count = node.get("result").get("search_result").get("count").asText();
+        String count = node.get("result").get("additional").get("search_params").get("all").get("model_id").asText();
         System.out.println(count);
         return Integer.parseInt(count);
     }
