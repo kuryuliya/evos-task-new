@@ -6,15 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3e55f32d-746e-485d-94d7-a86174cd5ede" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EvosTestTask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EvosTestTask.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Methods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests.java" afterDir="false" />
     </list>
     <list id="1467eb57-63cc-4eae-a3c1-8f9e42e1cb59" name="Changes by buba" comment="" />
-    <list id="934ac61d-9d9b-4b04-92dd-0e6893b47cc9" name="Changes by Home" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests.java" afterDir="false" />
-    </list>
+    <list id="934ac61d-9d9b-4b04-92dd-0e6893b47cc9" name="Changes by Home" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +25,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/java/Tests.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/Methods.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/BaseTest.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -47,16 +49,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/test/java/Tests.java">
-      <ranges>
-        <range start1="4" end1="4" start2="4" end2="5" changelist="3e55f32d-746e-485d-94d7-a86174cd5ede" />
-        <range start1="18" end1="28" start2="19" end2="44" changelist="3e55f32d-746e-485d-94d7-a86174cd5ede" />
-        <range start1="32" end1="33" start2="48" end2="50" changelist="934ac61d-9d9b-4b04-92dd-0e6893b47cc9" />
-        <range start1="34" end1="34" start2="51" end2="53" changelist="3e55f32d-746e-485d-94d7-a86174cd5ede" />
-      </ranges>
-    </file>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -194,19 +186,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -248,6 +227,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="TestNG.Tests" />
+      <item itemvalue="TestNG.Tests.searchCarsByCriteria" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.Tests" />
