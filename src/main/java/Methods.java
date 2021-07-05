@@ -20,10 +20,19 @@ public class Methods {
     public int getCountsOfResult(String body){
 
         final ObjectNode node = readValueJSON(body);
-        String count = node.get("result").get("additional").get("search_params").get("all").get("model_id").asText();
+        String count = node.get("result").get("search_result").get("count").asText();
         System.out.println(count);
         return Integer.parseInt(count);
     }
+
+    public String getQuery_String(String body){
+
+        final ObjectNode node = readValueJSON(body);
+        return  node.get("result").get("additional").get("query_string").asText();
+
+    }
+
+
 
     private ObjectNode readValueJSON(String body) {
         try {
