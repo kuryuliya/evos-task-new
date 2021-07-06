@@ -34,12 +34,23 @@ public class Methods {
 
 
 
+
     private ObjectNode readValueJSON(String body) {
         try {
             return objectMapper.readValue(body, ObjectNode.class);
         } catch (IOException e) {
             return null;
         }
+    }
+
+    // Tany
+
+    public int getCountsOfResultCommon(String body) {
+
+        final ObjectNode node = readValueJSON(body);
+        String count = node.get("result").get("search_result_common").get("count").asText();
+        System.out.println(count);
+        return Integer.parseInt(count);
     }
 }
 

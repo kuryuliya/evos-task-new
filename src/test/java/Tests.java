@@ -66,8 +66,44 @@ public class Tests extends BaseTest {
      * input parameters String category, String bodyStyle, String marka
      *  get result.search_result_common.count - json path >0
      * */
+    @Test(dataProvider = "getDataCount")
+    public void searchCars(String category, String bodyStyle, String marka) {
+//        формируем критерии запроса
+
+        var params = new HashMap<String, String>();
+        params.put("category_id", category);
+        params.put("bodystyle[0]", bodyStyle);
+        params.put("marka_id[0]", marka);
 
 
+//        делаем запрос, получаем ответ
+
+        String response = given()
+                .when()
+                .params(params)
+                .get()
+                .then()
+                .log()
+                .all()
+                .statusCode(200)
+                .and()
+                .extract()
+                .asString();
+
+        var resultCommonCount = page.getCountsOfResultCommon(response);
+
+        assertTrue(resultCommonCount > 0, "Search returned no results, possibly incorrect search criteria");
+    }
+    @DataProvider()
+    public Iterator<Object[]> getDataCount() {
+        return Stream.of(
+                asList("1", "3", "47"),
+                asList("1", "3", "79"),
+                asList("1", "3", "28")
+        ).map(List::toArray).iterator();
+
+
+    }
     /**
      * Jenya
      * input parameters String model, String yearsFrom, String yearsTo
