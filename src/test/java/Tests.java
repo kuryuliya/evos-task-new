@@ -182,10 +182,10 @@ public class Tests extends BaseTest {
      * создать такой же тест, как searchCarsByYear()
      * постараться разобраться, что там происходит
      * строку var carList =  getResponseAsClass.getResult().getSearch_result_common().getData(); заменить на свою, где нужно будет получить List по пути
-     * additional.search_params.all.bodystyle
+     * result.search_result.ids
      * почитать что такое Stream() и какие у него есть методы
-     * далее заменить проверку на свою, где нужно будет проверить что список bodystyle имеет всего два элемента(
-     * метод size()), поменять нужно только это вырежение для этого carList.stream().allMatch(car -> car.getType().equals("UsedAuto")
+     * далее заменить проверку на свою, где нужно будет проверить что каждый элементы из списка ids не пустой(
+     * метод isEmpty()), поменять нужно только это вырежение для этого carList.stream().allMatch(car -> car.getType().equals("UsedAuto")
      * */
 
     /**
@@ -193,10 +193,10 @@ public class Tests extends BaseTest {
      * создать такой же тест, как searchCarsByYear()
      * постараться разобраться, что там происходит
      * строку var carList =  getResponseAsClass.getResult().getSearch_result_common().getData(); заменить на свою, где нужно будет получить List по пути
-     * result.search_result.ids
+     * additional.search_params.all.bodystyle
      * почитать что такое Stream() и какие у него есть методы
-     * далее заменить проверку на свою, где нужно будет проверить что каждый элементы из списка ids не пустой(
-     * метод isEmpty()), поменять нужно только это вырежение для этого carList.stream().allMatch(car -> car.getType().equals("UsedAuto")
+     * далее заменить проверку на свою, где нужно будет проверить что список bodystyle имеет всего два элемента(
+     * метод size()), поменять нужно только это вырежение для этого carList.stream().allMatch(car -> car.getType().equals("UsedAuto
      * */
 }
 
