@@ -25,6 +25,15 @@ public class Methods {
         return Integer.parseInt(count);
     }
 
+    public String getQuery_String(String body){
+
+        final ObjectNode node = readValueJSON(body);
+        return  node.get("result").get("additional").get("query_string").asText();
+
+    }
+
+
+
     private ObjectNode readValueJSON(String body) {
         try {
             return objectMapper.readValue(body, ObjectNode.class);

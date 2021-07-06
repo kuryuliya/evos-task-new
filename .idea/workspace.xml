@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3e55f32d-746e-485d-94d7-a86174cd5ede" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evos-task-new" beforeDir="false" />
     </list>
     <list id="1467eb57-63cc-4eae-a3c1-8f9e42e1cb59" name="Changes by buba" comment="" />
     <list id="934ac61d-9d9b-4b04-92dd-0e6893b47cc9" name="Changes by Home" comment="" />
@@ -23,7 +23,15 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_COMMON_BRANCH" value="master" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/java/Tests.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/BaseTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/HttpAsyncClient.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/Methods.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -140,7 +148,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -175,19 +183,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -258,6 +253,8 @@
       <workItem from="1537767255275" duration="3647000" />
       <workItem from="1625385916767" duration="1036000" />
       <workItem from="1625388642801" duration="4832000" />
+      <workItem from="1625548712161" duration="27000" />
+      <workItem from="1625548776547" duration="432000" />
     </task>
     <servers />
   </component>
@@ -316,6 +313,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/evos-task-new" />
+    </ignored-roots>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
