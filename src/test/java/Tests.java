@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -188,6 +189,38 @@ public class Tests extends BaseTest {
      * метод isEmpty()), поменять нужно только это вырежение для этого carList.stream().allMatch(car -> car.getType().equals("UsedAuto")
      * */
 
+    @Test
+    public void searchCarsByYearIds() {
+//        формируем критерии запроса
+        var params = Map.of(
+                "po_yers[1]", "2017",
+                "s_yers[1]", "2017",
+                "category_id", "1",
+                "bodystyle[0]", "3",
+                "bodystyle[1]", "5");
+
+//        делаем запрос, получаем ответ
+        var response = given()
+                .when()
+                .params(params)
+                .get()
+                .then()
+                .statusCode(200)
+                .log()
+                .all()
+                .extract()
+                .body()
+                .asString();
+
+        var getResponseAsClass = page.parseResponse(response, SearchResponse.class);
+        var idList =  getResponseAsClass.getResult().getSearch_result().getIds();
+
+        // isEmpty() method - it returns true, if length of string is 0 otherwise false.
+        // Вопрос, корректна ли такая запись "!id.isEmpty" - в таком случае мы получаем true, если элемент из списка не пустой.
+        // Если запись такая "id.isEmpty" - то мы получаем false, так как строки списка не пустые
+
+        assertTrue(idList.stream().allMatch(id -> !id.isEmpty()), "Was found a car with another type(not 'UsedAuto')");
+    }
     /**
      * Для Жени
      * создать такой же тест, как searchCarsByYear()
@@ -198,6 +231,36 @@ public class Tests extends BaseTest {
      * далее заменить проверку на свою, где нужно будет проверить что список bodystyle имеет всего два элемента(
      * метод size()), поменять нужно только это вырежение для этого carList.stream().allMatch(car -> car.getType().equals("UsedAuto
      * */
+
+    @Test
+    public void searchCarsByYearBodyStile() {
+//        формируем критерии запроса
+        var params = Map.of(
+                "po_yers[1]", "2017",
+                "s_yers[1]", "2017",
+                "category_id", "1",
+                "bodystyle[0]", "3",
+                "bodystyle[1]", "5");
+
+//        делаем запрос, получаем ответ
+        var response = given()
+                .when()
+                .params(params)
+                .get()
+                .then()
+                .statusCode(200)
+                .log()
+                .all()
+                .extract()
+                .body()
+                .asString();
+
+        var getResponseAsClass = page.parseResponse(response, SearchResponse.class);
+        var bodystyleList =  getResponseAsClass.getResult().getAdditional().getSearch_params().getAll().getBodystyle();
+
+        assertTrue((bodystyleList.size() == 2), "Was found a car with another type(not 'UsedAuto')");
+    }
+
 }
 
 
