@@ -7,12 +7,11 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class Tests extends BaseTest {
+public class AutoRiaTests extends AutoRiaBaseTest {
 
     Methods page = new Methods();
 

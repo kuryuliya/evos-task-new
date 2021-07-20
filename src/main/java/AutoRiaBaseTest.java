@@ -6,7 +6,7 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import org.testng.annotations.BeforeClass;
 
-public class BaseTest {
+public class AutoRiaBaseTest {
 
     private final static String BASE_URI = "https://developers.ria.com/auto/search?";
     private String API_KEY_HEADER = "api_key";
